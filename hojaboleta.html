@@ -132,7 +132,7 @@
             Datos cliente
           </th>
           <th colspan="6" style="width: 50%; white-space: nowrap">
-            Datos factura
+            Datos de la cotización
           </th>
         </tr>
         <tr>
@@ -142,17 +142,12 @@
               <b>RTN: <span id="rtncliente"></span></b><br />
               <b>Telefono: <span id="telefonocliente"></span></b><br />
               <b>Direccion: <span id="direccioncliente"></span></b><br />
-              <b>Vendedor: <span id="vendedor"></span></b><br />
             </div>
           </td>
           <td colspan="6" style="width: 50%; white-space: nowrap">
             <div style="text-align: left">
-              <b>Factura: <span id="factura"></span></b><br />
-              <b>Fecha: <span id="date"></span></b><br />
-              <b>CAI: <span id="cai"></span></b><br />
-              <b>Rango autorizado: <span id="rango"></span></b><br />
-              <b>Fecha limite de emision: <span id="limite"></span></b><br />
-              <b>Cajero: <span id="cajero"></span></b><br />
+              <b>Fecha: <span id="date"></span></b><br />              
+              <b>Vendedor: <span id="vendedor"></span></b><br />
             </div>
           </td>
         </tr>
@@ -217,14 +212,6 @@
             <div align="left">
               --------------------------------------------------------------------------------------------------
             </div>
-            <b>Datos del cliente exonerado</b><br />
-            <span>Orden de compra exenta: <b id="ocexe"></b></span>&nbsp;&nbsp;
-            <span>No. Registro exonerado: <b id="ocexo"></b></span>&nbsp;&nbsp;
-            <span>No. Registro SAG: <b id="nosag"></b></span>
-           
-            <div align="left">
-              --------------------------------------------------------------------------------------------------
-            </div>
             <b>Condiciones de pago</b><br />
             <span>Formado de pago: <b id="formapago"></b></span>
             <span>Plazo en dias: <b id="plazo"></b></span><br />
@@ -242,15 +229,7 @@
               text-align: right;
             "
           >
-            Subtotal:<br />
-            Descuentos y rebajas:<br />
-            Valor exento:<br />
-            Valor exonerado:<br />
-            Gravado con 15%:<br />
-            Gravado con 18%:<br />
-            Isv 15%:<br />
-            Isv 18%:<br />
-            <b>Total venta:</b>
+           <b>Total venta:</b>
           </td>
           <td
             colspan="2"
@@ -260,14 +239,6 @@
               text-align: right;
             "
           >
-            L<span id="subtotal"></span><br />
-            L<span id="descuento"></span><br />
-            L<span id="subtotalexe"></span><br />
-            L<span id="subtotalexo"></span><br />
-            L<span id="subtotalisv15"></span><br />
-            L<span id="subtotalisv18"></span><br />
-            L<span id="isv15"></span><br />
-            L<span id="isv18"></span><br />
             <b>L<span id="total"></span></b>
           </td>
         </tr>
@@ -356,16 +327,7 @@
           getQueryParam("direccioncliente");
         document.getElementById("vendedor").textContent =
           getQueryParam("vendedor");
-        document.getElementById("factura").textContent =
-          getQueryParam("factura");
         document.getElementById("date").textContent = getQueryParam("date");
-        document.getElementById("cai").textContent = getQueryParam("cai");
-        document.getElementById("rango").textContent = getQueryParam("rango");
-        document.getElementById("limite").textContent = getQueryParam("limite");
-        document.getElementById("cajero").textContent = getQueryParam("cajero");
-        document.getElementById("ocexe").textContent = getQueryParam("ocexe");
-        document.getElementById("ocexo").textContent = getQueryParam("ocexo");
-        document.getElementById("nosag").textContent = getQueryParam("nosag");
         document.getElementById("formapago").textContent = getQueryParam("formapago");
         document.getElementById("plazo").textContent = getQueryParam("plazo");
         document.getElementById("pagos").textContent = getQueryParam("pagos");
@@ -378,14 +340,6 @@
         document.getElementById("modelo").textContent = getQueryParam("modelo");
         document.getElementById("combustible").textContent = getQueryParam("combustible");
         document.getElementById("observacion").textContent = getQueryParam("observacion");
-        document.getElementById("subtotal").textContent = getQueryParam("subtotal");
-        document.getElementById("descuento").textContent = getQueryParam("descuento");
-        document.getElementById("subtotalexe").textContent = getQueryParam("subtotalexe");
-        document.getElementById("subtotalexo").textContent = getQueryParam("subtotalexo");
-        document.getElementById("subtotalisv15").textContent = getQueryParam("subtotalisv15");
-        document.getElementById("subtotalisv18").textContent = getQueryParam("subtotalisv18");
-        document.getElementById("isv15").textContent = getQueryParam("isv15");
-        document.getElementById("isv18").textContent = getQueryParam("isv18");
         document.getElementById("total").textContent = getQueryParam("total");
 
         // Set barcode
