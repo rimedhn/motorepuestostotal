@@ -100,17 +100,39 @@
         align: center;
         vertical-align: center;
       }
+      
+/* Estilos para el contenedor del encabezado */
+.invoice-header {
+    width: 100%; /* Asegura que el encabezado ocupe todo el ancho de la página */
+    padding: 0; /* Elimina cualquier padding interno del encabezado */
+    margin: 0; /* Elimina cualquier margen externo del encabezado */
+    overflow: hidden; /* Importante para contener elementos flotantes si los hubiera */
+    /* Puedes añadir un color de fondo si quieres, por ejemplo: background-color: #f0f0f0; */
+}
+
+/* --- */
+
+/* Estilos para la imagen del logo dentro del encabezado */
+.header-logo {
+    display: block; /* Elimina espacios extra que puedan aparecer con imágenes */
+    width: 100%; /* ¡Esto es clave! Hace que la imagen ocupe el 100% del ancho de su contenedor (.invoice-header) */
+    height: auto; /* Mantiene la proporción original de la imagen. La altura se ajustará automáticamente. */
+    /* Si deseas que tenga una altura fija (como tus 84px originales), puedes poner:
+    height: 84px;
+    object-fit: contain; /* o cover, dependiendo de cómo quieras que se ajuste si el ancho no es exacto */
+    margin: 0 auto; /* Centra la imagen si el contenedor es más grande que ella, aunque con width: 100% no será necesario */
+}
     </style>
   </head>
   <body>
+    <header class="invoice-header">
+        <img src="https://github.com/rimedhn/motorepuestostotal/blob/main/Logo%20cabecera%20moto%20repuestos%20total.jpeg?raw=true" alt="Logo" class="header-logo">
+        </header>
     <div class="label">    
       <table style="width: 100%; border-collapse: collapse;
-    border: none;" class="sin-bordes">
+    border: none; margin-top: 5px;" class="sin-bordes">
         <tr>
-          <th colspan="3" style="width: 10%">
-            <img src="https://github.com/rimedhn/motorepuestostotal/blob/main/Logo%20corto%20Moto%20respuestos%20total.jpeg?raw=true" alt="Mi imagen" class="mi-imagen" />
-          </th>
-          <th colspan="9" style="width: 90%; text-align: left">
+          <th colspan="12" style="width: 100%; text-align: left">
             <b style="font-size: 30px" id="empresa"></b><br />
             <b>RTN: <span id="rtn"></span></b><br />
             <b>Direccion: <span id="direccion"></span></b><br />
