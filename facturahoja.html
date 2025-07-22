@@ -190,9 +190,9 @@
           <td style="text-align: center; class="detalleproducts" colspan="6">Detalle</td>
         </tr>
         <tr>
-          <td  style="text-align: center; width: 10%">
+          <td  style="text-align: center; width: 20%">
             <h2 style="font-size: 4mm; text-align: Center; line-height: 0.1">
-              Cant
+              Codigo
             </h2>
           </td>
           <td  style="text-align: left; width: 40%">
@@ -200,24 +200,19 @@
               Descripcion
             </h2>
           </td>
-          <td  style="text-align: right; width: 11%">
+          <td  style="text-align: right; width: 10%">
             <h2 style="font-size: 4mm; text-align: Center; line-height: 0.1">
-              Precio
+              Cantidad
             </h2>
           </td>
-          <td  style="text-align: right; width: 14%">
+          <td  style="text-align: right; width: 15%">
             <h2 style="font-size: 4mm; text-align: Center; line-height: 0.1">
-              Subt.
+              Precio U.
             </h2>
           </td>
-          <td  style="text-align: right; width: 11%">
+          <td  style="text-align: right; width: 15%">
             <h2 style="font-size: 4mm; text-align: Center; line-height: 0.1">
-              Isv
-            </h2>
-          </td>
-          <td  style="text-align: right; width: 14%">
-            <h2 style="font-size: 4mm; text-align: Center; line-height: 0.1">
-              Monto
+              Importe L
             </h2>
           </td>
         </tr>
@@ -424,19 +419,17 @@
         var descriptions = getQueryParam("descriptions").split(",");
         var quantitys = getQueryParam("quantitys").split(",");
         var price = getQueryParam("price").split(",");
-        var subtproducto = getQueryParam("subtproducto").split(",");
-        var isvproducto = getQueryParam("isvproducto").split(",");
+        var codeproduct = getQueryParam("codeproduct").split(",");
         var amounts = getQueryParam("amounts").split(",");
 
         var productList = document.getElementById("productList");
         for (var i = 0; i < descriptions.length; i++) {
           var row = productList.insertRow();
-          row.insertCell(0).textContent = quantitys[i];
+          row.insertCell(0).textContent = codeproduct[i];
           row.insertCell(1).textContent = descriptions[i];
-          row.insertCell(2).textContent = price[i];
-          row.insertCell(3).textContent = subtproducto[i];
-          row.insertCell(4).textContent = isvproducto[i];
-          row.insertCell(5).textContent = amounts[i];
+          row.insertCell(2).textContent = quantitys[i];
+          row.insertCell(3).textContent = price[i];
+          row.insertCell(4).textContent = amounts[i];
         }
 
         // Convert amount to words (simplified version)
