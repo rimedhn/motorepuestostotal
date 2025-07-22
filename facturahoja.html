@@ -416,10 +416,10 @@
           getQueryParam("Folio_1");
 
         // Fill product list
+        var codeproduct = getQueryParam("codeproduct").split(",");
         var descriptions = getQueryParam("descriptions").split(",");
         var quantitys = getQueryParam("quantitys").split(",");
         var price = getQueryParam("price").split(",");
-        var codeproduct = getQueryParam("codeproduct").split(",");
         var amounts = getQueryParam("amounts").split(",");
 
         var productList = document.getElementById("productList");
